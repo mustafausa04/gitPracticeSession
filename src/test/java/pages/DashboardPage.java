@@ -23,4 +23,8 @@ public class DashboardPage {
 	
 	@FindBy (xpath = "//p[text()='Logged in successfully.']") //this is the message that appears once we login
 	public WebElement loggedInSuccess_message;
+	
+	@FindBy (xpath = "//h6[text()=' Sales & Expenses']")      //to locate the Sales % Expenses title in the page
+	public WebElement dashboard_page_SalesAndExpensesHeader; 
+	
 }

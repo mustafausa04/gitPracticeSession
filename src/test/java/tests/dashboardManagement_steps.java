@@ -22,5 +22,22 @@ public class dashboardManagement_steps {
 		Assert.assertTrue(dashPage.dashboard_page_SalesAndExpensesHeader.isDisplayed());
 	    Driver.quitDriver();
 	}
+	
+	@Then("I should see the buttons {string}, {string}, {string}, and {string}")
+	public void i_should_see_the_buttons_and(String amountDue, String customers, String invoices, String estimates) {
+	    if(dashPage.dashboard_page_AmountDue_Button.getText().contains(amountDue)) {
+	    	Assert.assertTrue(true);
+	    }
+	    if(dashPage.dashboard_page_Customers_Button.getText().contains(customers)) {
+	    	Assert.assertTrue(true);
+	    }
+	    if(dashPage.dashboard_page_Invoices_Button.getText().contains(invoices)) {
+	    	Assert.assertTrue(true);
+	    }
+	    if(dashPage.dashboard_page_Estimates_Button.getText().contains(estimates)) {
+	    	Assert.assertTrue(true);
+	    }
+	    Driver.quitDriver();
+	}
 
 }

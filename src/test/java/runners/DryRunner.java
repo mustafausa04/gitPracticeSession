@@ -28,7 +28,8 @@ import io.cucumber.junit.CucumberOptions;
 		//tags="@newCustomerInvalidNoInfo"
 		//tags="@newCustomers"
 		//tags="@newCustomerFormErrorMessages"
-		tags="@SalesandExpensesHeader"
+		//tags="@SalesandExpensesHeader"
+		tags="@dashboardButtons"
 		)
 
 public class DryRunner {

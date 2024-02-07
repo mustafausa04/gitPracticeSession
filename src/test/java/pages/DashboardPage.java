@@ -27,4 +27,16 @@ public class DashboardPage {
 	@FindBy (xpath = "//h6[text()=' Sales & Expenses']")      //to locate the Sales % Expenses title in the page
 	public WebElement dashboard_page_SalesAndExpensesHeader; 
 	
+	@FindBy (xpath = "//span[text()='Amount Due']")
+	public WebElement dashboard_page_AmountDue_Button;
+	
+	@FindBy (xpath = "//span[text()='Customers']")
+	public WebElement dashboard_page_Customers_Button;
+	
+	@FindBy (xpath = "//span[text()='Invoices']")
+	public WebElement dashboard_page_Invoices_Button;
+	
+	@FindBy (xpath = "//span[text()='Estimates']")
+	public WebElement dashboard_page_Estimates_Button;
+	
 }

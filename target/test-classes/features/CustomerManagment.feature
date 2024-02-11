@@ -1,4 +1,5 @@
 #Go to http://crater.primetech-apps.com/login crater login page.
+#put in where on the red screen to unlock it thisisunsafe
 #Enter the credentials email: dummy@primetechschool.com password: primetech@school
 #Click the login button
 #Navigate to thr customers tab

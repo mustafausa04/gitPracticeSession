@@ -12,7 +12,8 @@ public class dashboardManagement_steps {
 	DashboardPage dashPage = new DashboardPage();
 	
 	@Then("I should be on the Dasboard home page")
-	public void i_should_be_on_the_dasboard_home_page() {
+	public void i_should_be_on_the_dasboard_home_page() throws InterruptedException {
+		Thread.sleep(3000);
 		System.out.println(Driver.getDriver().getTitle());
 	    
 	}
@@ -38,6 +39,19 @@ public class dashboardManagement_steps {
 	    	Assert.assertTrue(true);
 	    }
 	    Driver.quitDriver();
+	}
+	
+	@Then("I should see the headers {string} and {string}")
+	public void i_should_see_the_headers_and(String dueInvoices, String recentEstimates) {
+		if(dashPage.dashboard_page_DueInvoices_Header.getText().contains(dueInvoices)) {
+	    	Assert.assertTrue(true);
+	    	System.out.println("The header Due Invoices is displayed");
+		}
+		if(dashPage.dashboard_page_RecentEstimates_Header.getText().contains(recentEstimates)) {
+	    	Assert.assertTrue(true);
+	    	System.out.println("The header Recent Estimates is displayed");
+		}
+		Driver.quitDriver();
 	}
 
 }

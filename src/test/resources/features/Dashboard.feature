@@ -1,8 +1,10 @@
 @dashboardTests
 Feature: Dashboard home page
-
+#we moved this step "Then I should be on the Dasboard home page" me and Bijan from all scenario
+#because it was not working so we moved it to the Background because we will use it in every scenario
 Background:
    Given As an entity user, I am logged in
+   #Then I should be on the Dasboard home page
    
    @SalesandExpensesHeader
    Scenario: As a user when I log in, I should be on the dashboard page and see the header sales and expenses
@@ -11,5 +13,10 @@ Background:
    
    @dashboardButtons
    Scenario: As a user when I log in, I should see the four buttons
-   Then I should be on the Dashboard home page
+   Then I should be on the Dasboard home page
    And I should see the buttons "Amount Due", "Customers", "Invoices", and "Estimates"
+   
+   @dashboardHeaders
+   Scenario: As a user when I log in, I should see the headers
+   Then I should be on the Dasboard home page
+   And I should see the headers "Due Invoices" and "Recent Estimates"

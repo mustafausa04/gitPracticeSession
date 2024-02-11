@@ -30,14 +30,15 @@ import io.cucumber.junit.CucumberOptions;
 		//tags="@newCustomerTableList"
 		//tags="@editItem"
 		//tags="@ScenarioOutlineDemo"
-		//tags="@customerTableColumns"
+        //tags="@customerTableColumns"
 		//tags="@customerTableMoreOptions"
 		//tags="@newCustomerCreatedMessage"
 		//tags="@newCustomerInvalidNoInfo"
 		//tags="@newCustomers"
 		//tags="@newCustomerFormErrorMessages"
-		//tags="@SalesandExpensesHeader"
-		tags="@dashboardButtons"
+        //tags="@SalesandExpensesHeader"
+        //tags="@dashboardButtons"
+        tags="@dashboardHeaders"
 		)
 public class TestRunner {
 

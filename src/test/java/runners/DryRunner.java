@@ -29,7 +29,8 @@ import io.cucumber.junit.CucumberOptions;
 		//tags="@newCustomers"
 		//tags="@newCustomerFormErrorMessages"
 		//tags="@SalesandExpensesHeader"
-		tags="@dashboardButtons"
+		//tags="@dashboardButtons"
+		tags="@dashboardHeaders"
 		)
 
 public class DryRunner {

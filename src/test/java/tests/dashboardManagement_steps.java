@@ -14,12 +14,13 @@ public class dashboardManagement_steps {
 	@Then("I should be on the Dasboard home page")
 	public void i_should_be_on_the_dasboard_home_page() throws InterruptedException {
 		Thread.sleep(3000);
+		utils.waitForElementToBeVisible(dashPage.dashboard_page_SalesAndExpensesHeader);//we put this step here because we use it in every step
 		System.out.println(Driver.getDriver().getTitle());
 	    
 	}
 	@Then("I should see the header {string}")
 	public void i_should_see_the_header(String string) {
-		utils.waitForElementToBeVisible(dashPage.dashboard_page_SalesAndExpensesHeader);
+		//utils.waitForElementToBeVisible(dashPage.dashboard_page_SalesAndExpensesHeader);//we will move it up so we can use it in every other step
 		Assert.assertTrue(dashPage.dashboard_page_SalesAndExpensesHeader.isDisplayed());
 	    Driver.quitDriver();
 	}
@@ -51,6 +52,18 @@ public class dashboardManagement_steps {
 	    	Assert.assertTrue(true);
 	    	System.out.println("The header Recent Estimates is displayed");
 		}
+		Driver.quitDriver();
+	}
+	
+	@Then("I should see the graph wth a drop down menu having the options {string} and {string}")
+	public void i_should_see_the_graph_wth_a_drop_down_menu_having_the_options_and(String thisYear, String previousYear) {
+		utils.waitForElementToBeVisible(dashPage.dashboard_page_graph);
+		Assert.assertTrue(dashPage.dashboard_page_graph.isDisplayed());
+		Assert.assertTrue(dashPage.dashboard_page_year_dropdown.isDisplayed());
+		dashPage.dashboard_page_year_dropdown.click();
+		utils.waitForElementToBeVisible(dashPage.dashboard_page_PreviousYear_dropdown_option);
+		Assert.assertTrue(dashPage.dashboard_page_ThisYear_dropdown_option.isDisplayed());
+		Assert.assertTrue(dashPage.dashboard_page_PreviousYear_dropdown_option.isDisplayed());
 		Driver.quitDriver();
 	}
 

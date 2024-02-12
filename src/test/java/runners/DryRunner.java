@@ -30,7 +30,8 @@ import io.cucumber.junit.CucumberOptions;
 		//tags="@newCustomerFormErrorMessages"
 		//tags="@SalesandExpensesHeader"
 		//tags="@dashboardButtons"
-		tags="@dashboardHeaders"
+		//tags="@dashboardHeaders"
+		tags="@dashboardGraph"
 		)
 
 public class DryRunner {

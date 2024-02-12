@@ -20,3 +20,8 @@ Background:
    Scenario: As a user when I log in, I should see the headers
    Then I should be on the Dasboard home page
    And I should see the headers "Due Invoices" and "Recent Estimates"
+   
+   @dashboardGraph
+   Scenario: As a user when I log in, I should see the graph with a dropdown menu
+   Then I should be on the Dasboard home page
+   And I should see the graph wth a drop down menu having the options "This year" and "Previous year"
